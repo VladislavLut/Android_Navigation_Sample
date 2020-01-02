@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="ua.lutsenko.vladyslav.androidnavigationsample.StartFragment"
+        android:label="StartFragment"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_AFragment"
+            app:destination="@id/AFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_BFragment"
+            app:destination="@id/BFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_navigation_secondary"
+            app:destination="@id/navigation_secondary" />
+    </fragment>
+    <fragment
+        android:id="@+id/AFragment"
+        android:name="ua.lutsenko.vladyslav.androidnavigationsample.AFragment"
+        android:label="AFragment"
+        tools:layout="@layout/fragment_a">
+        <action
+            android:id="@+id/action_AFragment_to_CFragment"
+            app:destination="@id/CFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BFragment"
+        android:name="ua.lutsenko.vladyslav.androidnavigationsample.BFragment"
+        android:label="BFragment"
+        tools:layout="@layout/fragment_b" />
+    <fragment
+        android:id="@+id/CFragment"
+        android:name="ua.lutsenko.vladyslav.androidnavigationsample.CFragment"
+        android:label="CFragment"
+        tools:layout="@layout/fragment_c" />
+    <include app:graph="@navigation/navigation_secondary" />
+</navigation>

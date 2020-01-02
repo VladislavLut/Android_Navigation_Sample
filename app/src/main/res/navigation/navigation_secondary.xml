@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_secondary"
+    app:startDestination="@id/startDFragment">
+
+    <fragment
+        android:id="@+id/startDFragment"
+        android:name="ua.lutsenko.vladyslav.androidnavigationsample.StartDFragment"
+        android:label="StartDFragment"
+        tools:layout="@layout/fragment_start_d">
+        <action
+            android:id="@+id/action_startDFragment_to_DFragment"
+            app:destination="@id/DFragment"
+            app:popUpTo="@+id/navigation_secondary"
+            app:popUpToInclusive="true" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="app://start/d" />
+    </fragment>
+    <fragment
+        android:id="@+id/DFragment"
+        android:name="ua.lutsenko.vladyslav.androidnavigationsample.DFragment"
+        android:label="DFragment"
+        tools:layout="@layout/fragment_d">
+        <action
+            android:id="@+id/action_DFragment_to_EFragment"
+            app:destination="@id/EFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/EFragment"
+        android:name="ua.lutsenko.vladyslav.androidnavigationsample.EFragment"
+        android:label="EFragment"
+        tools:layout="@layout/fragment_e" />
+</navigation>
