@@ -17,7 +17,7 @@
             app:popUpToInclusive="true" />
         <deepLink
             android:id="@+id/deepLink"
-            app:uri="app://module/f" />
+            app:uri="app://start/f" />
     </fragment>
     <fragment
         tools:layout="@layout/fragment_f"

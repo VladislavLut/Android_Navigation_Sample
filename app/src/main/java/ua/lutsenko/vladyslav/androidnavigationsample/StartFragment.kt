@@ -23,6 +23,9 @@ class StartFragment : Fragment(R.layout.fragment_start) {
         toDeepLinkButton?.setOnClickListener {
             findNavController().navigate(Uri.parse("app://start/d"))
         }
+        toExternalModuleDeepLinkButton?.setOnClickListener {
+            findNavController().navigate(Uri.parse("app://start/f"))
+        }
     }
 
 }

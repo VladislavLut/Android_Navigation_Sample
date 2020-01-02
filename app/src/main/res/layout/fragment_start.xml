@@ -39,4 +39,11 @@
         android:layout_gravity="center"
         android:text="To Secondary Graph Deep Link" />
 
+    <Button
+        android:id="@+id/toExternalModuleDeepLinkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="To External Module Deep Link" />
+
 </LinearLayout>
