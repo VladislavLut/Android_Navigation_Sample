@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val config = AppBarConfiguration(findNavController(R.id.mainHost).graph)
         setupActionBarWithNavController(findNavController(R.id.mainHost), config)
+        findNavController(R.id.mainHost).setGraph(R.navigation.navigation_main)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
